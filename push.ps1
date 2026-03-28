@@ -1,5 +1,5 @@
-git init
-git remote add origin https://github.com/ARJUNDUBEY01/OddoXIndus-Hackathon.git
+# git init (already initialized)
+git remote add origin https://github.com/TheRakshitRaj/odooXIndus.git
 
 # 1. Base Project Config
 git add package.json package-lock.json vite.config.js eslint.config.js .gitignore index.html README.md
