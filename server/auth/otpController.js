@@ -191,10 +191,14 @@ exports.resetPassword = async (req, res) => {
     // Call the Supabase Edge Function to update the password
     // The edge function has the service_role_key built-in
     const SUPABASE_URL = process.env.SUPABASE_URL || 'https://bjqjzaggovihrbjuuvsa.supabase.co';
+    const SUPABASE_ANON = process.env.SUPABASE_ANON_KEY;
 
     const updateRes = await fetch(`${SUPABASE_URL}/functions/v1/reset-password`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${SUPABASE_ANON}`
+      },
       body: JSON.stringify({ email: email.toLowerCase(), new_password }),
     });
 
