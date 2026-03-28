@@ -12,13 +12,19 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     // Check active sessions and sets the user
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data: { session }, error }) => {
+      if (error) {
+        console.error('Error fetching session:', error);
+      }
       setUser(session?.user ?? null);
       if (session?.user) {
         fetchProfile(session.user.id);
       } else {
         setLoading(false);
       }
+    }).catch(err => {
+      console.error('Unexpected error in getSession:', err);
+      setLoading(false);
     });
 
     // Listen for changes on auth state (logged in, signed out, etc.)
