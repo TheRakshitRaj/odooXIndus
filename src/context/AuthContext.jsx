@@ -38,7 +38,14 @@ export const AuthProvider = ({ children }) => {
       }
     });
 
-    return () => subscription.unsubscribe();
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+
+    return () => {
+      subscription.unsubscribe();
+      clearTimeout(timeout);
+    };
   }, []);
 
   const fetchProfile = async (userId) => {
