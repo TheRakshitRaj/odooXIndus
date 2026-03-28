@@ -1,16 +1,81 @@
-# React + Vite
+# 🚀 Inventra — Blockchain Secured Inventory Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Inventra is a **modern Inventory Management System (IMS)** that digitizes and streamlines stock operations with a **tamper-proof blockchain ledger**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
 
-## React Compiler
+* 📦 Product & stock management (multi-warehouse)
+* 📥 Receipts (incoming stock)
+* 📤 Delivery orders (outgoing stock)
+* 🔄 Internal transfers
+* ⚖️ Inventory adjustments
+* 📊 Analytics dashboard
+* 📱 QR code product tracking
+* 🎤 Voice search
+* 👥 Role-based access control
+* 🔐 Email OTP authentication
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⛓️ Blockchain Integration (Core Feature)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Inventra uses a **custom private blockchain** to record all inventory transactions.
+
+### ✔ What it does
+
+* Stores every operation (receipt, delivery, transfer, adjustment) as a **block**
+* Links blocks using cryptographic hashes
+* Prevents data tampering
+
+### ✔ Key Benefits
+
+* Tamper-proof stock history
+* Transparent audit trail
+* Fraud detection
+
+### ✔ Demo Feature
+
+* “Verify Blockchain Integrity” button
+* Detects any modification in records
+
+---
+
+## 🏗️ Tech Stack
+
+**Frontend:** React, Tailwind CSS
+**Backend:** Node.js, Express
+**Database:** MongoDB
+**Blockchain:** Custom (Node.js crypto)
+
+---
+
+## 📁 Project Structure
+
+```
+client/ (React frontend)
+server/
+  ├── controllers
+  ├── routes
+  ├── models
+  ├── blockchain
+```
+
+---
+
+## 🚀 Why This Project Stands Out
+
+* Combines **inventory + blockchain security**
+* Real-world warehouse workflows
+* Modern UI with analytics & automation
+
+---
+
+## 👨‍💻 Developed By
+
+Rakshit Raj
+
+---
+
+⭐ If you like this project, give it a star!
